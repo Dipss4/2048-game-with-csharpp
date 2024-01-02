@@ -203,7 +203,7 @@ namespace matriz
             }
             else
             {
-                board[positionX, positionY] = 2048;
+                board[positionX, positionY] = 4;
             }
         }
 
