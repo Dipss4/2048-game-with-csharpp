@@ -15,7 +15,6 @@ namespace matriz
             {
                 if (still == 1)
                 {
-                    //call the function to create a random number
                     creator(board);
                     still = 0;
                 }
@@ -86,7 +85,6 @@ namespace matriz
                 {
                     for (int j = 0; j < board.GetLength(1); j++)
                     {
-                        //writing the number and color
                         if ((board[i, j] == 0))
                         {
                             Console.ForegroundColor = ConsoleColor.White;
@@ -135,7 +133,7 @@ namespace matriz
                 }
                 Console.WriteLine("\nw - move to up | s - move to down | d - move to right | a - move to left");
                 move = Console.ReadLine();
-                switch (move)//call function to move the numbers and collision
+                switch (move)
                 {
                     case "w":
                         motion(board, move, out still);
@@ -169,7 +167,6 @@ namespace matriz
                 {
                     if (board[i, j] == 2048)
                     {
-                        // verify if the player won
                         vic = 1;
                     }
 
@@ -187,7 +184,6 @@ namespace matriz
             {
                 positionY = random.Next(0, 4);
                 positionX = random.Next(0, 4);
-                // see the possition of new number Console.WriteLine(positionX + " " + positionY);
                 if (board[positionX, positionY] == 0)
                 {
                     break;
@@ -195,7 +191,6 @@ namespace matriz
                 else
                 { }
             }
-            //probability 2 - 90% | 4 - 10%
             int probabi = random.Next(0, 11);
             if (probabi < 10)
             {
